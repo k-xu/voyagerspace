@@ -64,53 +64,42 @@ function draw() {
 
 
 //KEY PRESS TRANSITION 01
-function mouseClicked() {
-  if (soundFile.currentTime() > 0 && soundFile.currentTime() < 42) {
-      soundFile.stop();
-      soundFile.jump(42);
+function keyTyped() {
+  if (key === '1') {
+      soundFile.jump(0);
   }
     
-    if (soundFile.currentTime() > 42 && soundFile.currentTime() < 75) {
-        soundFile.stop();
-        soundFile.jump(75);
+    if (key ==='2') {
+      soundFile.jump(42);
   } 
-    if (soundFile.currentTime() > 75 && soundFile.currentTime() < 88) {
-      soundFile.stop();
-        soundFile.jump(88);
+    if (key ==='3') {
+      soundFile.jump(75);
   }
-    if (soundFile.currentTime() > 88 && soundFile.currentTime() < 163) {
-        soundFile.stop();
-        soundFile.jump(163);
+    if (key ==='4') {
+        soundFile.jump(88);
     } 
-    if (soundFile.currentTime() > 163 && soundFile.currentTime() < 261) {
-        soundFile.stop();
+    if (key === '5') {
+        soundFile.jump(163);
+    }
+    if (key ==='6') {
         soundFile.jump(261);
     }
-    if (soundFile.currentTime() > 261 && soundFile.currentTime() < 322) {
-        soundFile.stop();
+    if (key ==='7') {
         soundFile.jump(322);
     }
-    if (soundFile.currentTime() > 322 && soundFile.currentTime() < 404) {
-        soundFile.stop();
+    if (key==='8') {
         soundFile.jump(404);
     }
-     if (soundFile.currentTime() > 404 && soundFile.currentTime() < 451) {
-        soundFile.stop();
-         soundFile.jump(451);
+    if (key==='9') {
+        soundFile.jump(451);
     }
-    if (soundFile.currentTime() > 451 && soundFile.currentTime() < 500) {
-        soundFile.stop();
+    if (key==='0') {
         soundFile.jump(500);
     }
-     if (soundFile.currentTime() > 500 && soundFile.currentTime() < 564) {
-        soundFile.stop();
-         soundFile.jump(0);
-    }
     
-    
-   
     return false;
 }
+
 
 //White Ellipse Analyzer Machine
 function ellipseAnalyzerWhite(soundVolume, posX, posY) {
@@ -203,14 +192,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
     
     //text    
-    fill(255);
-  noStroke();
-  textSize(20);
-  text('01:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('01:', width/2, height/2-220);
   text('The Sun', width/2, height/2+230);
  }
     
@@ -231,15 +217,12 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume);    
      
         //text    
-     fill(255);
+   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
   text('02:', width/2, height/2-220);
-
-  fill(255);
-  noStroke();
-  textSize(20);
-  text('Mercury', width/2,               height/2+230);
+  text('Mercury', width/2, height/2+230);
     }
 
     
@@ -258,14 +241,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('03:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('03:', width/2, height/2-220);
   text('Venus', width/2, height/2+230);
            }
     
@@ -286,14 +266,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('04:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('04:', width/2, height/2-220);
   text('Earth', width/2, height/2+230);
            }
     
@@ -313,14 +290,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('05:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('05:', width/2, height/2-220);
   text('Mars', width/2, height/2+230);
            }
     
@@ -340,14 +314,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('06:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('06:', width/2, height/2-220);
   text('Jupiter', width/2, height/2+230);
            }
     
@@ -367,14 +338,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('07:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('07:', width/2, height/2-220);
   text('Saturn', width/2, height/2+230);
            }
     
@@ -394,14 +362,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('08:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('08:', width/2, height/2-220);
   text('Uranus', width/2, height/2+230);
            }
     
@@ -421,14 +386,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('09:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('09:', width/2, height/2-220);
   text('Neptune', width/2, height/2+230);
            }
     
@@ -449,14 +411,11 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     rect(windowWidth/2-200, windowHeight/2-200, 400+soundVolume, 400+soundVolume); 
      
             //text    
-     fill(255);
-  noStroke();
-  textSize(20);
-  text('10:', width/2, height/2-220);
-
   fill(255);
   noStroke();
-  textSize(20);
+  textSize(12);
+  textAlign(CENTER);
+  text('10:', width/2, height/2-220);
   text('Pluto', width/2, height/2+230);
            }
         
@@ -470,17 +429,20 @@ function ellipseAnalyzerWhite(soundVolume, posX, posY) {
     
     
     
-  //BORDERS: INSTRUCTION TEXT
-     fill(255);
+    //BORDERS: INSTRUCTION TEXT
+    fill(255);
     noStroke();
-    textSize(20);
+    textSize(12);
     
-    textAlign(CENTER);
-    text('The Voyager: Sounds received from Space', windowWidth/2, 82);
+    textAlign(LEFT);
+    text('The Voyager: Sounds received from Space', 50, 50);
+     text('Move cursor to regulate frequency', 50, windowHeight-50);
     
+    textAlign(RIGHT);
+    text('Cmd+R to reload audio system', windowWidth-50, 50);
+    text('Press keys 1-0 to switch and layer sounds', windowWidth-50, windowHeight-50);
     
 //-----------------
-    
     
     
     //filter
